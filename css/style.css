@@ -1,0 +1,397 @@
+/*Обнуление*/
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	/* Добавляем box-sizing: border-box; ко всем элементам */
+	/* box-sizing: border-box; */
+}
+
+html,
+body {
+	height: 100%;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+	font-size: 16px;
+}
+
+a {
+	color: chartreuse;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 40px;
+	margin: 0px 0px 30px 0px;
+}
+
+h2 {
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+
+h3 {
+	font-size: 24px;
+	margin: 0px 0px 20px 0px;
+}
+
+h4 {
+	font-size: 20px;
+	margin: 0px 0px 15px 0px;
+}
+
+h5 {
+	font-size: 16px;
+	margin: 0px 0px 10px 0px;
+}
+
+p {
+	line-height: 20px;
+	margin: 20px 0;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.content {
+	padding: 30px 3%;
+}
+
+.content__block {
+	margin: 0px 0px 50px 0px;
+}
+
+/* ------------------------------------ Основные стили ---------------------------------- */
+.section {
+	margin: 0px 0px 50px 0px;
+}
+
+.section__block {
+	margin: 0px 0px 30px 0px;
+}
+
+.section__item {
+	text-align: justify;
+}
+
+.section__item_padding {
+	padding: 15px;
+}
+
+.section__item_color-1 {
+	background-color: #204174;
+}
+
+.section__item_color-2 {
+	background-color: #167e56;
+}
+
+.section__item_color-3 {
+	background-color: #5f2596;
+}
+
+/* ------------------------------------Общая информация, синтаксис------------------------------------ */
+div.section__item_info {
+	/* Развернутый отступ */
+	/* margin: 10px 10px 10px 10px; */
+	/* padding: 10px 10px 10px 10px; */
+
+	/* Сокращенный вариант записи */
+	/* margin: 10px; */
+	/* padding: 10px; */
+
+	/* Вариант когда по бокам один отступ, сверху и снизу другой */
+	/* margin: 10px 20px; */
+	/* padding: 10px 20px; */
+
+	/* Вариант когда по бокам одинаковые отступы, а сверху и снизу разные */
+	/* margin: 0px 10px 20px; */
+	/* padding: 0px 10px 20px; */
+
+	/* Вариант когда нам надо указать отступ только с одной строны */
+	/* margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px; */
+}
+
+span.section__item_info {
+	/* Пытаемся применять padding к строчным элементам */
+	/* padding: 20px; */
+
+	/* Пытаемся применять margin по вертикали к строчным элементам */
+	/* margin: 20px 0px; */
+
+	/* Пытаемся применять margin по горизонтали к строчным элементам */
+	/* margin: 0px 20px; */
+
+	/* Применяем dispay: inline-block к строчным элементам */
+	/* display: inline-block; */
+}
+
+img.section__image {
+	/* Применяем padding к картинке */
+	padding: 15px;
+
+	/* Применяем margin к картинке */
+	/* margin: 15px; */
+
+	/* применяем box-sizing к картинке */
+	/* box-sizing: border-box; */
+	/* Размер элемента остался 300рх, но картинка сжалась */
+
+	width: 300px;
+}
+
+/* ------------------------------------Отступы и размеры блока. Свойство box-sizing------------------------------------ */
+.section__item_size {
+	width: 500px;
+
+	/* padding: 15px; */
+	/* Размер элемента становится 530рх */
+
+	/* box-sizing: border-box; */
+	/* Размер элемента становится 500рх */
+
+	/* margin: 15px; */
+	/* Размер элемента по факту становится 530рх, не смотря на box-sizing */
+	/* Соответственно box-sizing влияет только на padding */
+
+	/* Попробовать на картинке */
+}
+
+/* ------------------------------------Отступы и фон------------------------------------ */
+.section__item_background-color {
+	/* Отступы нужно применять в зависимости от ситуации */
+
+	/* Нужно чтобы блоки были отделены друг от друга */
+	/* margin: 15px; */
+
+	/* Нужно чтобы текст был отделен от краев, но блоик были склеены */
+	/* padding: 15px; */
+}
+
+.section__item_background-image {
+	color: rgb(177, 177, 177);
+	background: url("../img/icon.svg") 0 0px / 33px no-repeat;
+
+	/* Добавляем margin слева 50рх и видим что весь блок отъехал */
+	/* margin: 0px 0px 0px 50px; */
+
+	/* Добавляем padding и видим что иконка осталась на месте, а текст отъехал, как нам и было нужно */
+	/* padding: 0px 0px 0px 50px; */
+}
+
+/* ------------------------------------Отступы и позиционирование------------------------------------ */
+.section__item_position {
+	position: relative;
+	color: rgb(177, 177, 177);
+	/* Добавляем margin слева 50рх и видим что весь блок отъехал */
+	/* margin: 0px 0px 0px 50px; */
+
+	/* Добавляем padding и видим что псевдоэлемент остался на месте, а текст отъехал, как нам и было нужно */
+	/* padding: 0px 0px 0px 50px; */
+}
+
+.section__item_position::before {
+	width: 25px;
+	height: 25px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+}
+
+/* ------------------------------------Отступы и overflow: hidden;------------------------------------ */
+
+.section__block_hidden {
+	overflow: hidden;
+
+	/* Добавляем padding и тень отображается корректно */
+	/* padding: 25px; */
+}
+
+.section__item_hidden {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	box-shadow: 0 0 20px #d9f5c8;
+}
+
+/* ------------------------------------Центровка блока------------------------------------ */
+.section__item_center {
+	/* Ни inline, ни inline-block не сработают */
+	/* display: inline; */
+	/* display: inline-block; */
+
+	/* Элемент должен быть блочным обязательно и ограничен по ширине*/
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+
+	/* Добавляем margin по вертикали 0рх и auto по горизонтали, таким образом элемент встанет по центру */
+	/* margin: 0px auto; */
+}
+
+/* ------------------------------------Отрицательные значения Margin------------------------------------ */
+
+/* Margin можно задавать отрицательные значение, padding нельзя */
+
+.section__item_minus {
+	padding: 15px;
+}
+
+.section__item_minus-top {
+	/* Применяем отрицательный отступ и элемент наезжает на верхний.
+	Третий элемент, при этом так же подтянулся наверх
+	Таким образом, применяя отрицательный margin, мы поднимаем не только сам элемент, но и все что идет за ним */
+	/* margin: -50px 0px 0px 0px; */
+
+	/* Применяем position: relative; и z-index: 2; чтобы второй элемент полностью перекрыл первый */
+	/* position: relative; */
+
+	/* z-index не работает с position: statick; */
+	/* z-index: 2; */
+
+	/* Можно применить top: -50px, но нижний элемент тогда останется на своем месте */
+	/* top: -50px; */
+
+	/* Тоже самое будет если применять transform: translate(0px, -50px); */
+	/* transform: translateY(-50px); */
+}
+
+.section__row {
+	display: flex;
+	/* Добавляем отрицательный margin, раздвигая флекс контейнер чтобы убрать лишние отступы по бокам */
+	/* margin: 0px -15px; */
+}
+
+.section__column {
+	/* Задаем padding флекс элементам\колонкам, сдвигая контентную часть внутри */
+	/* padding: 0px 15px; */
+	flex: 0 1 33.333%;
+}
+
+.section__item_flex {
+	/* Добавляем padding  - становятся видны колонки */
+	/* padding: 15px; */
+
+	/* Можно задать еще margin, но тогда слева и справа от блока появляются отступы которые нам не нужны */
+	/* margin: 0px 15px; */
+}
+
+.slider {
+	display: flex;
+	overflow: hidden;
+	
+	/* Если просто добавить padding, то увеличивается расстояние между блоками */
+	/* padding: 25px 0; */
+
+	/* Поэтому добавляем отрицательный margin по вертикали */
+	/* margin: -25px 0; */
+}
+
+.slider__item {
+	text-align: center;
+	flex: 0 1 33.333%;
+}
+
+.slider__image {
+	width: 150px;
+	height: 150px;
+	margin: 0px auto;
+	border-radius: 50%;
+	background-color: #204174;
+	box-shadow: 0 0 20px #d9f5c8;
+}
+
+/* ------------------------------------Схлопывание Margin------------------------------------ */
+.section__item_collapse {
+	padding: 15px;
+	/* margin: 0px 0px 20px 0px; */
+}
+
+.section__item_collapse-top {
+	/* margin: -10px 0px 20px 0px; */
+}
+
+/* ------------------------------------
+Отступы следует задавать 
+от предыдущего элемента к следующему 
+------------------------------------
+*/
+
+.section__item_bottom {
+	padding: 10px;
+	margin: 0px 0px 20px 0px;
+}
+
+.section__items {
+	display: flex;
+}
+
+.section__item_right {
+	padding: 15px;
+	margin: 0px 20px 0px 0px;
+}
+
+/* 
+У последнего элемента группы, 
+отступ следует обнулять
+*/
+
+.section__body_last {
+	background-color: #204174;
+	padding: 20px 50px;
+}
+
+.section__list {}
+
+.section__list li {
+	margin: 0px 0px 10px 0px;
+}
+
+.section__list li:last-child {
+	/* margin-bottom: 0; */
+}
+
+.section__item_item {
+	padding: 15px;
+}
+
+/* 
+Отступы задаются самому
+верхнему родителю в конструкции (доме)
+
+В том числе, таким образом можно 
+избежать проблем при отступах 
+с заливкой фона
+*/
+
+.section__body_parent {
+	background-color: #5f2596;
+	/* padding: 50px 50px; */
+}
+
+.section__list {}
+
+.section__item_parent {
+	margin: 0px 0px 20px 0px;
+	/* Даже задав отступ тут будет проблема */
+}
+
+.section__item_parent:last-child {
+	margin: 0;
+}
