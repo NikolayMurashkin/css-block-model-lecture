@@ -157,10 +157,13 @@ img.section__image {
 .section__item_size {
 	width: 500px;
 
-	/* padding: 15px; */
-	/* Размер элемента становится 530рх */
+	border: 10px solid #167e56;
+	padding: 15px;
+	margin: 10px;
+	/* Ширина элемента становится 550рх */
 
 	/* box-sizing: border-box; */
+	/* box-sizing: content-box; */
 	/* Размер элемента становится 500рх */
 
 	/* margin: 15px; */
@@ -295,7 +298,7 @@ img.section__image {
 .slider {
 	display: flex;
 	overflow: hidden;
-	
+
 	/* Если просто добавить padding, то увеличивается расстояние между блоками */
 	/* padding: 25px 0; */
 
@@ -318,21 +321,41 @@ img.section__image {
 }
 
 /* ------------------------------------Схлопывание Margin------------------------------------ */
+.margin {
+	position: relative;
+	margin-bottom: 100px;
+}
+
 .section__item_collapse {
+	height: 40px;
 	padding: 15px;
-	/* margin: 0px 0px 20px 0px; */
+
+	/* margin: 20px; */
+	/* Положительные отступы */
+
+	/* margin: -20px 0px 0px; */
+	/* Отрицательные отступы вверх */
+
+	/* margin-bottom: 40px; */
+	/* Отрицательный и положительный margin так же схлапываются */
+
+	/* margin-bottom: -20px; */
+	/* Отрицательные отступы тоже схлапываются */
+
 }
 
 .section__item_collapse-top {
-	/* margin: -10px 0px 20px 0px; */
+	/* position: absolute; */
+	/* Отступы не схлапываются когда элемент абсолютно позиционирован */
+
+	/* margin-top: -20px; */
 }
 
-/* ------------------------------------
-Отступы следует задавать 
-от предыдущего элемента к следующему 
-------------------------------------
-*/
+.section__item_collapse-empty {
+	margin: 40px;
+}
 
+/* ------------------------------------Отступы следует задавать от предыдущего элемента к следующему ------------------------------------*/
 .section__item_bottom {
 	padding: 10px;
 	margin: 0px 0px 20px 0px;
@@ -395,3 +418,76 @@ img.section__image {
 .section__item_parent:last-child {
 	margin: 0;
 }
+
+/* ------------------------------------Арифметика блока------------------------------------ */
+.section__item_arithmetic {
+	padding: 15px;
+}
+
+.section__item_arithmetic-50 {
+	width: 50%;
+}
+
+.section__item_arithmetic-30 {
+	width: 30%;
+}
+
+.section__item_arithmetic-20 {
+	width: 20%;
+}
+
+.section__items_em {
+	font-size: 20px;
+}
+
+.section__item_arithmetic-5em {
+	width: 5em;
+}
+
+.section__item_arithmetic-3em {
+	width: 3em;
+}
+
+.section__item_arithmetic-2em {
+	width: 2em;
+}
+
+.section__item_arithmetic-5rem {
+	width: 5rem;
+}
+
+.section__item_arithmetic-3rem {
+	width: 3rem;
+}
+
+.section__item_arithmetic-2rem {
+	width: 2rem;
+}
+
+.section__item_arithmetic-width {
+	width: 200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.section__item_arithmetic-ml {
+	width: 200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.section__item_arithmetic-auto {
+	width: 200px;
+	/* margin: auto; */
+}
+
+.section__item_arithmetic-auto-width {
+	margin: auto;
+}
+
+.section__item_arithmetic-m {
+	margin: 0px 20px 0px 40px;
+}
+
+.section__item_arithmetic-mw {}

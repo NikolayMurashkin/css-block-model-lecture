@@ -138,27 +138,28 @@
 						</div>
 					</div>
 				</section>
-				<section class="section">
+				<section class="section margin">
 					<h2>Схлопывание Margin</h2>
 					<p>При состыковке вертикальных внешних отступов они схлопываются.</p>
 					<div class="section__item section__item_color-1 section__item_collapse">
 						Объект №1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 					</div>
-					<div class="section__item section__item_color-2 section__item_collapse section__item_collapse-top">
+					<div class="section__item section__item_color-2 section__item_collapse">
 						Объект №2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 					</div>
-					<div class="section__item section__item_color-3 section__item_collapse">
+					<div class="section__item section__item_color-3 section__item_collapse section__item_collapse-top">
 						Объект №3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur minima culpa soluta nam dolores sequi.
 					</div>
-					<p>
-						<ul class="section__list">
-							<li>Когда оба значения margin положительные, итоговый размер поля будет равен бóльшему значению.</li>
-							<li>Если одно из значений является отрицательным, то для вычисления размера поля нужно получить сумму значений.</li>
-							<li>Если оба значения отрицательные, сравниваются модули этих чисел и выбирается число, бóльшее по модулю </li>
-							<li>В случае, когда значения указаны в разных единицах CSS, они приводятся к одной, после чего сравниваются и выбирается бóльшее значение.</li>
-							<li>Если у потомка поле margin больше, чем у родителя, то приоритет отдается ему. В этом случае размеры верхнего и нижнего полей родителя станут такими, как задано у потомка. При этом расстояния между родителем и потомком не будет.</li>
-						</ul>
-					</p>
+					<div class="section__item_collapse-empty">
+					</div>
+					<ul class="section__list">
+						<li>Когда оба значения margin положительные, итоговый размер поля будет равен бóльшему значению.</li>
+						<li>Если одно из значений является отрицательным, то для вычисления размера поля нужно получить сумму значений.</li>
+						<li>Если оба значения отрицательные, сравниваются модули этих чисел и выбирается число, бóльшее по модулю </li>
+						<li>В случае, когда значения указаны в разных единицах CSS, они приводятся к одной, после чего сравниваются и выбирается бóльшее значение.</li>
+						<li>Если у потомка поле margin больше, чем у родителя, то приоритет отдается ему. В этом случае размеры верхнего и нижнего полей родителя станут такими, как задано у потомка. При этом расстояния между родителем и потомком не будет.</li>
+						<li>У блока без содержимого хоть и есть свойство margin: 40px, но двигается нижний блок только на 40px, а не на 80рх (top & bottom)</li>
+					</ul>
 				</section>
 				<section class="section">
 					<h2>Принципы применения отступов</h2>
@@ -226,6 +227,105 @@
 									<li>Пункт №3</li>
 									<li>Пункт №4</li>
 								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section">
+					<h2>Арифметика блока</h2>
+					<p>Арифметика блока — это способ вычисления размеров блоков с помощью CSS. Для этого используются относительные еденицы измерения, такие как проценты и 'em' и 'rem'.
+						В результате, размеры элемента будут зависеть от его контекста, а не какой-либо жестко заданной константы.
+					</p>
+					<div class="section__block">
+						<h3>Пример использования процентов для установки ширины элемента:</h3>
+						<div class="section__items">
+							<div class="section__item section__item_color-1 section__item_arithmetic section__item_arithmetic-50">
+								50%
+							</div>
+							<div class="section__item section__item_color-2 section__item_arithmetic section__item_arithmetic-30">
+								30%
+							</div>
+							<div class="section__item section__item_color-3 section__item_arithmetic section__item_arithmetic-20">
+								20%
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Пример использования EM для установки ширины элемента:</h3>
+						<p>1em === размеру шрифта родительского элемента, в данном случае это 20рх</p>
+						<div class="section__items section__items_em">
+							<div class="section__item section__item_color-1 section__item_arithmetic section__item_arithmetic-5em">
+								5em
+							</div>
+							<div class="section__item section__item_color-2 section__item_arithmetic section__item_arithmetic-3em">
+								3em
+							</div>
+							<div class="section__item section__item_color-3 section__item_arithmetic section__item_arithmetic-2em">
+								2em
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Пример использования REM для установки ширины элемента:</h3>
+						<p>1rem === 16px, 16рх это значение по умолчанию в браузерах, <br>пользователь может изменить это значение вручную в настройках раузера
+						</p>
+						<div class="section__items">
+							<div class="section__item section__item_color-1 section__item_arithmetic section__item_arithmetic-5rem">
+								5rem
+							</div>
+							<div class="section__item section__item_color-2 section__item_arithmetic section__item_arithmetic-3rem">
+								3rem
+							</div>
+							<div class="section__item section__item_color-3 section__item_arithmetic section__item_arithmetic-2rem">
+								2rem
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Пример когда задана ширина, но margin-left и margin-right не заданы:</h3>
+						<div class="section__items">
+							<div class="section__item section__item_color-1 section__item_arithmetic section__item_arithmetic-width">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatem voluptatibus, qui labore eius assumenda distinctio quasi tempora ipsam placeat nesciunt eveniet, cupiditate aut sapiente porro excepturi accusamus, inventore minima!
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Пример когда не задано margin-left:</h3>
+						<div class="section__items">
+							<div class="section__item section__item_color-2 section__item_arithmetic section__item_arithmetic-ml">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatem voluptatibus, qui labore eius assumenda distinctio quasi tempora ipsam placeat nesciunt eveniet, cupiditate aut sapiente porro excepturi accusamus, inventore minima!
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Пример когда margin: auto:</h3>
+						<div class="section__items">
+							<div class="section__item section__item_color-2 section__item_arithmetic section__item_arithmetic-auto">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatem voluptatibus, qui labore eius assumenda distinctio quasi tempora ipsam placeat nesciunt eveniet, cupiditate aut sapiente porro excepturi accusamus, inventore minima!
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Пример когда margin: auto и нет width:</h3>
+						<div class="section__items">
+							<div class="section__item section__item_color-2 section__item_arithmetic section__item_arithmetic-auto-width">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatem voluptatibus, qui labore eius assumenda distinctio quasi tempora ipsam placeat nesciunt eveniet, cupiditate aut sapiente porro excepturi accusamus, inventore minima!
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Пример когда margin: 0px 20px 0px 40px:</h3>
+						<div class="section__items">
+							<div class="section__item section__item_color-2 section__item_arithmetic section__item_arithmetic-m">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatem voluptatibus, qui labore eius assumenda distinctio quasi tempora ipsam placeat nesciunt eveniet, cupiditate aut sapiente porro excepturi accusamus, inventore minima!
+							</div>
+						</div>
+					</div>
+					<div class="section__block">
+						<h3>Пример когда не заданы margin и width:</h3>
+						<div class="section__items">
+							<div class="section__item section__item_color-2 section__item_arithmetic section__item_arithmetic-mw">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatem voluptatibus, qui labore eius assumenda distinctio quasi tempora ipsam placeat nesciunt eveniet, cupiditate aut sapiente porro excepturi accusamus, inventore minima!
 							</div>
 						</div>
 					</div>
