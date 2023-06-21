@@ -471,15 +471,64 @@ img.section__image {
 }
 
 .section__item_arithmetic-ml {
-	width: 200px;
+	width: 600px;
+	padding: 10px;
+}
+
+.inner-ml {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	margin-right: 20px;
+	margin-right: 10px;
+	padding: 10px;
+	width: 300px;
+	background-color: #07358a;
+}
+
+.section__item_arithmetic-mr {
+	width: 600px;
+	padding: 10px;
+}
+
+.inner-mr {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 200px;
+	padding: 10px;
+	width: 300px;
+	background-color: #07358a;
+}
+
+.section__item_arithmetic-mra {
+	width: 600px;
+	padding: 10px;
+}
+
+.inner-mra {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: auto;
+	padding: 10px;
+	width: 300px;
+	background-color: #07358a;
+}
+
+.section__item_arithmetic-mla {
+	width: 600px;
+	padding: 10px;
+}
+
+.inner-mla {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	padding: 10px;
+	width: 300px;
+	background-color: #07358a;
 }
 
 .section__item_arithmetic-auto {
 	width: 200px;
-	/* margin: auto; */
+	margin: auto;
 }
 
 .section__item_arithmetic-auto-width {
@@ -489,5 +538,3 @@ img.section__image {
 .section__item_arithmetic-m {
 	margin: 0px 20px 0px 40px;
 }
-
-.section__item_arithmetic-mw {}
